@@ -47,7 +47,7 @@ export const Launches = () => {
         {launches.map((launch) => (
           <li key={launch.id}>
             <strong>{launch.name}</strong> – {launch.launch_service_provider?.name || "Onbekend"} <br />
-            <strong>Launchdatum:</strong> {new Date(launch.net).toLocaleString()} <br />
+            <strong>Datum:</strong> {new Date(launch.net).toLocaleString()} <br />
             {getCountdown(launch.net) && (
               <>
                 <strong>Countdown:</strong> {getCountdown(launch.net)}
