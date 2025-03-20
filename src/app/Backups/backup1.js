@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Greet } from "../components/greet";
-import { Counter } from "../components/counter";
+import { Greet } from "../Tests/test components/greet";
+import { Counter } from "../Tests/test components/counter";
 import { Astronauts } from "../components/astronautenAPI";
 
 export default function Home() {
