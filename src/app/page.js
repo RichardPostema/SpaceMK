@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h1>Astronauten overzicht</h1>
         <Astronauts />
         <Launches />
       </main>
