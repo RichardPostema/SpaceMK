@@ -8,7 +8,7 @@ const getCountdown = (launchDate) => {
   const launchTime = new Date(launchDate);
   const difference = launchTime - now;
 
-  if (difference <= 0) return "Lancering is al geweest";
+  if (difference <= 0) return null;  // Geen countdown tonen als lancering al geweest is
 
   const days = Math.floor(difference / (1000 * 60 * 60 * 24));
   const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -47,7 +47,12 @@ export const Launches = () => {
         {launches.map((launch) => (
           <li key={launch.id}>
             <strong>{launch.name}</strong> – {launch.launch_service_provider?.name || "Onbekend"} <br />
-            <strong>Countdown:</strong> {getCountdown(launch.net)}
+            <strong>Launchdatum:</strong> {new Date(launch.net).toLocaleString()} <br />
+            {getCountdown(launch.net) && (
+              <>
+                <strong>Countdown:</strong> {getCountdown(launch.net)}
+              </>
+            )}
           </li>
         ))}
       </ul>

@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Astronauts } from "./components/astronautenAPI";
+import { Astronauts } from "../components/astronautenAPI";
 
 export default function Home() {
   return (
