@@ -23,7 +23,6 @@ export const Astronauts = () => {
     const fetchAstronauts = async () => {
       try {
         const res = await fetch("https://lldev.thespacedevs.com/2.3.0/astronauts/?format=json&in_space=true&is_human=true");
-        // "in space" zorgt er voor dat ik mensen in de ruimte zie. "is_human" zorgt ervoor dat ik Spaceman van SpaceX niet zie.
         const data = await res.json();
         setAstronauts(data.results);
       } catch (error) {
@@ -41,11 +40,28 @@ export const Astronauts = () => {
   return (
     <div>
       <h2>Astronauten in de ruimte</h2>
-      <ul>
-        {astronauts.map((astronaut) => (
-          <li key={astronaut.id}>
-            <strong>{astronaut.name}</strong> – {astronaut.agency.name} <br />
-            <strong>Tijd in de ruimte:</strong> {formatTimeInSpace(astronaut.time_in_space)}
+      <ul
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "20px",
+          padding: 0,
+          listStyle: "none",
+        }}
+      >
+        {astronauts.slice(0, 6).map((astronaut) => (
+          <li
+            key={astronaut.id}
+            style={{ 
+              display: "flex", flexWrap: "wrap",background: "#0D0D0D",padding: "15px", borderRadius: "15px", maxHeight: "200px",
+              justifyContent: "center", listStyle: "none",
+              width: "calc(16.666% - 20px)", // Zorgt ervoor dat er 6 items per rij komen
+              boxSizing: "border-box", // Zorgt ervoor dat de padding geen extra ruimte inneemt
+            }}
+          >
+            <strong>{astronaut.name}</strong> <br />
+            {astronaut.agency.name} <br />
+{formatTimeInSpace(astronaut.time_in_space)}
           </li>
         ))}
       </ul>
