@@ -31,19 +31,23 @@ export const Astronauts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Code die uitgevoerd moet worden na het laden van de component
     const fetchAstronauts = async () => {
       try {
         const res = await fetch("https://lldev.thespacedevs.com/2.3.0/astronauts/?format=json&in_space=true&is_human=true");
         const data = await res.json();
+        //  // Verder verwerken van de data
         // Sorteer astronauten op basis van de tijd in de ruimte (minst lang in de ruimte eerst)
         const sortedAstronauts = data.results.sort((a, b) => {
           return getDaysInSpace(a.time_in_space) - getDaysInSpace(b.time_in_space);
         });
         setAstronauts(sortedAstronauts);
+        // Bijwerken van de staat
       } catch (error) {
         console.error("Fout bij ophalen van astronauten:", error);
       } finally {
         setLoading(false);
+        // Loading State
       }
     };
 
@@ -54,7 +58,7 @@ export const Astronauts = () => {
 
   return (
     <div>
-      <h2>Astronauten in de ruimte</h2>
+      <h2 >Astronauten in de ruimte</h2>
       <ul
         style={{
           display: "flex",
@@ -64,8 +68,8 @@ export const Astronauts = () => {
           listStyle: "none",
         }}
       >
-        {/* Alleen de eerste 6 astronauten die het minst lang in de ruimte zijn */}
-        {astronauts.slice(0, 6).map((astronaut) => (
+        {/* Alleen de eerste 7 astronauten die het minst lang in de ruimte zijn */}
+        {astronauts.slice(0, 7).map((astronaut) => (
           <li
             key={astronaut.id}
             style={{
@@ -77,7 +81,7 @@ export const Astronauts = () => {
               maxHeight: "200px",
               justifyContent: "center",
               listStyle: "none",
-              width: "calc(16.666% - 20px)", // Zorgt ervoor dat er 6 items per rij komen
+              width: "calc(20% - 20px)", // Zorgt ervoor dat er items per rij komen (-) is belangrijk
               boxSizing: "border-box", // Zorgt ervoor dat de padding geen extra ruimte inneemt
             }}
           >
