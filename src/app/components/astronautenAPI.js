@@ -15,6 +15,17 @@ const formatTimeInSpace = (time) => {
   return formattedTime.trim() || "Onbekend";
 };
 
+// Functie om tijd in ISO 8601 formaat om te zetten naar het aantal dagen
+const getDaysInSpace = (time) => {
+  const regex = /^P(\d+)D/;
+  const match = time.match(regex);
+  if (match) {
+    return parseInt(match[1], 10);
+  }
+
+  return 0; // Als geen dagen aanwezig zijn, return 0
+};
+
 export const Astronauts = () => {
   const [astronauts, setAstronauts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -24,7 +35,11 @@ export const Astronauts = () => {
       try {
         const res = await fetch("https://lldev.thespacedevs.com/2.3.0/astronauts/?format=json&in_space=true&is_human=true");
         const data = await res.json();
-        setAstronauts(data.results);
+        // Sorteer astronauten op basis van de tijd in de ruimte (minst lang in de ruimte eerst)
+        const sortedAstronauts = data.results.sort((a, b) => {
+          return getDaysInSpace(a.time_in_space) - getDaysInSpace(b.time_in_space);
+        });
+        setAstronauts(sortedAstronauts);
       } catch (error) {
         console.error("Fout bij ophalen van astronauten:", error);
       } finally {
@@ -49,19 +64,26 @@ export const Astronauts = () => {
           listStyle: "none",
         }}
       >
+        {/* Alleen de eerste 6 astronauten die het minst lang in de ruimte zijn */}
         {astronauts.slice(0, 6).map((astronaut) => (
           <li
             key={astronaut.id}
-            style={{ 
-              display: "flex", flexWrap: "wrap",background: "#0D0D0D",padding: "15px", borderRadius: "15px", maxHeight: "200px",
-              justifyContent: "center", listStyle: "none",
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              background: "#0D0D0D",
+              padding: "15px",
+              borderRadius: "15px",
+              maxHeight: "200px",
+              justifyContent: "center",
+              listStyle: "none",
               width: "calc(16.666% - 20px)", // Zorgt ervoor dat er 6 items per rij komen
               boxSizing: "border-box", // Zorgt ervoor dat de padding geen extra ruimte inneemt
             }}
           >
             <strong>{astronaut.name}</strong> <br />
             {astronaut.agency.name} <br />
-{formatTimeInSpace(astronaut.time_in_space)}
+            {formatTimeInSpace(astronaut.time_in_space)}
           </li>
         ))}
       </ul>
