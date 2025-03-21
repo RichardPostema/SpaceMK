@@ -57,3 +57,6 @@ https://www.youtube.com/watch?v=v0_AT8zaLo8
 
 Learn Next.js 15 in 1 hour - Beginner Tutorial
 https://www.youtube.com/watch?v=_EgI9WH8q1A
+
+Raket Emoji
+https://emojipedia.org/nl/raket
