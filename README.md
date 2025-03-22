@@ -1,3 +1,6 @@
+__SpaceMK__ 🚀<br>
+Milkyway Knowledge
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -14,8 +17,6 @@ pnpm dev
 bun dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-Space__MK__ 🚀
 
 ## Reden voor het gebruik van React/Next.JS:
 Het advies wat ik tegen kwam op het internet[¹](https://nextjs.org](https://www.youtube.com/watch?v=Tef1e9FiSR0)) om eerst React te leren, zodat de andere frameworks later makkelijker te begrijpen zijn.
