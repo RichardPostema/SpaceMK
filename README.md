@@ -22,10 +22,10 @@ Het advies wat ik tegen kwam op het internet[¹](https://nextjs.org](https://www
 https://lldev.thespacedevs.com/docs/
 
 ## Doelgroep
-Ruimte- en technologie-liefhebbers
-sterrenkunde hobbyisten
+Ruimte- en technologie-liefhebbers<br>
+sterrenkunde hobbyisten<br>
 
-# Waarom?
+__Waarom?__<br>
 Ze zoeken vaak naar tools die hen helpen meer te leren en ontdekken over mijn onderwerp.
 
 ## Code Review door:
