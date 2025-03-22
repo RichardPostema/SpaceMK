@@ -81,7 +81,7 @@ export const Astronauts = () => {
               maxHeight: "200px",
               justifyContent: "center",
               listStyle: "none",
-              width: "calc(20% - 20px)", // Zorgt ervoor dat er items per rij komen (-) is belangrijk
+              width: "calc(20% - 20px)", // Zorgt ervoor dat er items per rij komen, (-) is belangrijk
               boxSizing: "border-box", // Zorgt ervoor dat de padding geen extra ruimte inneemt
             }}
           >

@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import { Astronauts } from "./components/astronautenAPI";
 import { Launches } from "./components/launchesAPI";
+import { SpaceEvents } from "./components/events";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
         <Astronauts />
         <Launches />
+        <SpaceEvents/>
         <Footer/>
       </main>
       <footer className={styles.footer}>
