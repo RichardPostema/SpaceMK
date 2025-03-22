@@ -23,7 +23,7 @@ https://lldev.thespacedevs.com/docs/
 
 ## Doelgroep
 Ruimte- en technologie-liefhebbers<br>
-sterrenkunde hobbyisten<br>
+Sterrenkunde hobbyisten<br>
 
 __Waarom?__<br>
 Ze zoeken vaak naar tools die hen helpen meer te leren en ontdekken over mijn onderwerp.
