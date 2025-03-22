@@ -36,7 +36,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 ## Reden voor het gebruik van React/Next.JS:
-Het advies wat ik tegen kwam op het internet[¹](https://nextjs.org](https://www.youtube.com/watch?v=Tef1e9FiSR0)) om eerst React te leren, zodat de andere talen later makkelijker te begrijpen zijn.
+Het advies wat ik tegen kwam op het internet[¹](https://nextjs.org](https://www.youtube.com/watch?v=Tef1e9FiSR0)) om eerst React te leren, zodat de andere frameworks later makkelijker te begrijpen zijn.
 
 
 
@@ -66,3 +66,6 @@ https://www.youtube.com/watch?v=_EgI9WH8q1A
 
 Raket Emoji
 https://emojipedia.org/nl/raket
+
+¹ - The Complete Frontend Developer Roadmap
+https://www.youtube.com/watch?v=Tef1e9FiSR0
