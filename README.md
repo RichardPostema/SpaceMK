@@ -60,3 +60,9 @@ https://emojipedia.org/nl/raket
 
 ¹ - The Complete Frontend Developer Roadmap
 https://www.youtube.com/watch?v=Tef1e9FiSR0
+
+ObjectFit
+https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+
+onError
+https://stackoverflow.com/questions/34097560/react-js-replace-img-src-onerror
