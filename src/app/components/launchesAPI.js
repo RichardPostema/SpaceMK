@@ -42,7 +42,7 @@ export const Launches = () => {
 
   return (
     <div>
-      <h2>Launches 🛰️</h2>
+      <h2>Lanceringen 🛰️</h2>
       <ul>
         {launches.map((launch) => (
           <li key={launch.id}>

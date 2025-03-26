@@ -58,7 +58,7 @@ export const Astronauts = () => {
 
   return (
     <div>
-      <h2 >Astronauten in de ruimte</h2>
+      <h2 >Astronauten in de ruimte 👽</h2>
       <ul
         style={{
           display: "flex",
@@ -85,12 +85,37 @@ export const Astronauts = () => {
               boxSizing: "border-box", // Zorgt ervoor dat de padding geen extra ruimte inneemt
             }}
           >
-            
+  {astronaut.image ? (
+  <img
+    style={{
+      width: "200px",
+      height: "200px",
+      objectFit: "cover",
+      borderRadius: "10px",
+      justifyContent: "center",
+    }}
+    src={astronaut.image.image_url}
+    onError={(e) => (e.target.src = "/spacewalkingastronaut.jpg")}
+    alt={astronaut.name}
+  />
+) : (
+  <img
+    style={{
+      width: "200px",
+      height: "200px",
+      objectFit: "cover",
+      borderRadius: "10px",
+      justifyContent: "center",
+    }}
+    src="/spacewalkingastronaut.jpg"
+    alt="Placeholder astronaut"
+  />
+)}
+
             <strong>{astronaut.name}</strong> <br />
-            {astronaut.image && <img style={{maxWidth: "100%", maxHeight: "100%"}} src={astronaut.image?.image_url} />}<br/>
             {astronaut.agency.name} <br />
             {formatTimeInSpace(astronaut.time_in_space)}
-            <button>Meer informatie</button>
+            <button style={{width:"100%", height:"20px"}}>Meer informatie</button>
           </li>
         ))}
       </ul>

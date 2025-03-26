@@ -32,23 +32,13 @@ export const SpaceEvents = () => {
         <p>Er zijn momenteel geen evenementen beschikbaar.</p>
       ) : (
         <ul>
-          {events.map((event) => {
-            const eventDate = new Date(event.net);
-            
-            // Controleer of de datum geldig is
-            const formattedDate = eventDate instanceof Date && !isNaN(eventDate)
-              ? eventDate.toLocaleString()
-              : "Onbekend";
-
-            return (
-              <li key={event.id} style={{ marginBottom: "20px" }}>
-                <strong>{event.name}</strong> <br />
-                <em>{formattedDate}</em> <br />
-                <strong>Description</strong> {event.description || "Onbekend"} <br />
-                <strong>Locatie:</strong> {event.location || "Onbekend"}
-              </li>
-            );
-          })}
+          {events.map((event) => (
+            <li key={event.id} style={{ marginBottom: "20px" }}>
+              <strong>{event.name}</strong> <br />
+              <strong>Description</strong> {event.description || "Onbekend"} <br />
+              <strong>Locatie:</strong> {event.location || "Onbekend"}
+            </li>
+          ))}
         </ul>
       )}
     </div>
