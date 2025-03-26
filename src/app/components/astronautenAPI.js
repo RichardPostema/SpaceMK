@@ -111,9 +111,9 @@ export const Astronauts = () => {
     alt="Placeholder astronaut"
   />
 )}
-            <strong>{astronaut.name}</strong> <br />
-            {astronaut.agency.name} <br />
-            {formatTimeInSpace(astronaut.time_in_space)}
+            <span style={{fontSize:"18px",fontWeight: 'bold'}}>{astronaut.name}</span> <br />
+            <span style={{fontSize:"14px"}}>{astronaut.agency.name}</span> <br />
+            <span style={{fontSize:"12px"}}>{formatTimeInSpace(astronaut.time_in_space)}</span><br/>
             <a style={{width:"100%", height:"20px", marginTop:"10px",}}>Meer informatie</a>
           </li>
         ))}
