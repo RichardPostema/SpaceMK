@@ -27,7 +27,7 @@ export const SpaceEvents = () => {
 
   return (
     <div>
-      <h2>Events</h2>
+      <h2>Events 🌌</h2>
       {events.length === 0 ? (
         <p>Er zijn momenteel geen evenementen beschikbaar.</p>
       ) : (
@@ -44,9 +44,8 @@ export const SpaceEvents = () => {
               <li key={event.id} style={{ marginBottom: "20px" }}>
                 <strong>{event.name}</strong> <br />
                 <em>{formattedDate}</em> <br />
-                <strong>Status:</strong> {event.status || "Onbekend"} <br />
-                <strong>Missie:</strong> {event.mission?.name || "Geen missie vermeld"} <br />
-                <strong>Locatie:</strong> {event.location?.name || "Onbekend"}
+                <strong>Description</strong> {event.description || "Onbekend"} <br />
+                <strong>Locatie:</strong> {event.location || "Onbekend"}
               </li>
             );
           })}

@@ -78,16 +78,19 @@ export const Astronauts = () => {
               background: "#0D0D0D",
               padding: "15px",
               borderRadius: "15px",
-              maxHeight: "200px",
+              maxHeight: "100%",
               justifyContent: "center",
               listStyle: "none",
               width: "calc(20% - 20px)", // Zorgt ervoor dat er items per rij komen, (-) is belangrijk
               boxSizing: "border-box", // Zorgt ervoor dat de padding geen extra ruimte inneemt
             }}
           >
+            
             <strong>{astronaut.name}</strong> <br />
+            {astronaut.image && <img style={{maxWidth: "100%", maxHeight: "100%"}} src={astronaut.image?.image_url} />}<br/>
             {astronaut.agency.name} <br />
             {formatTimeInSpace(astronaut.time_in_space)}
+            <button>Meer informatie</button>
           </li>
         ))}
       </ul>
