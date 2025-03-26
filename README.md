@@ -66,3 +66,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
 
 onError
 https://stackoverflow.com/questions/34097560/react-js-replace-img-src-onerror
+
+FontSize
+https://www.dhiwise.com/post/ultimate-guide-to-font-sizes-in-react-all-you-need-to-know
