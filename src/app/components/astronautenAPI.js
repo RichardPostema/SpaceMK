@@ -69,27 +69,27 @@ export const Astronauts = () => {
         }}
       >
         {/* Alleen de eerste 7 astronauten die het minst lang in de ruimte zijn */}
-        {astronauts.slice(0, 7).map((astronaut) => (
+        {astronauts.slice(0, 10).map((astronaut) => (
           <li
             key={astronaut.id}
             style={{
               display: "flex",
               flexWrap: "wrap",
-              background: "#0D0D0D",
+              background: "#072326",
               padding: "15px",
               borderRadius: "15px",
               maxHeight: "100%",
               justifyContent: "center",
-              listStyle: "none",
               width: "calc(20% - 20px)", // Zorgt ervoor dat er items per rij komen, (-) is belangrijk
               boxSizing: "border-box", // Zorgt ervoor dat de padding geen extra ruimte inneemt
+              textAlign: "center", // Zorgt ervoor dat de tekst in center staat!
             }}
           >
   {astronaut.image ? (
   <img
     style={{
       width: "200px",
-      height: "200px",
+      height: "500px",
       objectFit: "cover",
       borderRadius: "10px",
       justifyContent: "center",
@@ -102,7 +102,7 @@ export const Astronauts = () => {
   <img
     style={{
       width: "200px",
-      height: "200px",
+      height: "500px",
       objectFit: "cover",
       borderRadius: "10px",
       justifyContent: "center",
@@ -111,11 +111,10 @@ export const Astronauts = () => {
     alt="Placeholder astronaut"
   />
 )}
-
             <strong>{astronaut.name}</strong> <br />
             {astronaut.agency.name} <br />
             {formatTimeInSpace(astronaut.time_in_space)}
-            <button style={{width:"100%", height:"20px"}}>Meer informatie</button>
+            <a style={{width:"100%", height:"20px", marginTop:"10px",}}>Meer informatie</a>
           </li>
         ))}
       </ul>

@@ -51,6 +51,33 @@ export const Launches = () => {
             {getCountdown(launch.net) && (
               <>
                 <strong>Countdown:</strong> {getCountdown(launch.net)}
+
+                {launches.image ? (
+  <img
+    style={{
+      width: "200px",
+      height: "500px",
+      objectFit: "cover",
+      borderRadius: "10px",
+      justifyContent: "center",
+    }}
+    src={launches.image.image_url}
+    onError={(e) => (e.target.src = "/spacewalkingastronaut.jpg")}
+    alt={launch.name}
+  />
+) : (
+  <img
+    style={{
+      width: "200px",
+      height: "500px",
+      objectFit: "cover",
+      borderRadius: "10px",
+      justifyContent: "center",
+    }}
+    src="/spacewalkingastronaut.jpg"
+    alt="Placeholder astronaut"
+  />
+)}
               </>
             )}
           </li>
