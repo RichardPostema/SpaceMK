@@ -69,3 +69,6 @@ https://stackoverflow.com/questions/34097560/react-js-replace-img-src-onerror
 
 FontSize
 https://www.dhiwise.com/post/ultimate-guide-to-font-sizes-in-react-all-you-need-to-know
+
+Display, gridTemplateColumns,
+https://stackoverflow.com/questions/53219249/css-grid-template-columns-repeat-no-more-than-x-times
