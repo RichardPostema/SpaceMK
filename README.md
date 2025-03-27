@@ -75,3 +75,6 @@ https://stackoverflow.com/questions/53219249/css-grid-template-columns-repeat-no
 
 onMouseEnter/onMouseLeave
 https://stackoverflow.com/questions/31775182/react-event-onmouseleave-not-triggered-when-moving-cursor-fast
+
+Navbar sticky
+https://stackoverflow.com/questions/58096450/how-to-have-a-sticky-navbar-in-reactjs
