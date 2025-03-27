@@ -41,7 +41,7 @@ export const Launches = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div style={{ textAlign: "center" }}> {/* De hoofd container wordt gecentreerd */}
+    <div id="launches" style={{ textAlign: "center" }}> {/* De hoofd container wordt gecentreerd */}
       <h2>Launches 🛰️</h2>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", textAlign: "center" }}> {/* Grid ook gecentreerd */}
         {launches.slice(0, 6).map((launch) => (

@@ -31,7 +31,8 @@ export const Astronauts = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div style={{ textAlign: "center" }}> {/* De hoofd container wordt gecentreerd */}      <h2>People in space 👽</h2>
+    <div id="astronauten" style={{ textAlign: "center" }}>
+      <h2>People in space 👽</h2>
       {astronauts.length === 0 ? (
         <p>No astronauts in space at the moment.</p>
       ) : (
@@ -48,30 +49,30 @@ export const Astronauts = () => {
               <span style={{ fontSize: "14px" }}>{astronaut.agency?.name || "Unknown Agency"}</span> <br />
               <span style={{ fontSize: "12px" }}>Days in space: {getDaysInSpace(astronaut.time_in_space)}</span><br />
               <a
-  style={{
-    width: "120px",
-    height: "40px", // Vergroot de hoogte voor betere centrering
-    marginTop: "10px",
-    cursor: "pointer",
-    border: "1px solid #ddd",
-    borderRadius: "10px",
-    textAlign: "center",
-    display: "inline-block",
-    lineHeight: "40px",
-    fontWeight: "bold",
-    transition: "background-color 0.3s, color 0.3s", // Voeg overgangseffecten toe
-  }}
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "#ddd"; // Verander de achtergrondkleur bij hover
-    e.target.style.color = "#black"; // Verander de tekstkleur bij hover
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "transparent"; // Herstel de achtergrondkleur
-    e.target.style.color = "white"; // Herstel de tekstkleur
-  }}
->
-  Info
-</a>
+                style={{
+                  width: "120px",
+                  height: "40px", 
+                  marginTop: "10px",
+                  cursor: "pointer",
+                  border: "1px solid #ddd",
+                  borderRadius: "10px",
+                  textAlign: "center",
+                  display: "inline-block",
+                  lineHeight: "40px",
+                  fontWeight: "bold",
+                  transition: "background-color 0.3s, color 0.3s", 
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#ddd"; 
+                  e.target.style.color = "black"; 
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "transparent"; 
+                  e.target.style.color = "white"; 
+                }}
+              >
+                Info
+              </a>
             </div>
           ))}
         </div>
