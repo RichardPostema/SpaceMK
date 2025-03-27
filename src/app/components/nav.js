@@ -16,16 +16,16 @@ function Nav() {
       fontSize: "18px",         // Vergroot de tekst
     }}>
       <li style={{ margin: "0 20px" }}>
-        <Link href="#" style={{ color: "white" }}>Home</Link> {/* Link naar boven */}
+        <Link href="#" style={{ color: "white", textDecoration: "none" }}>Home</Link> {/* Link naar boven */}
       </li>
       <li style={{ margin: "0 20px" }}>
-        <Link href="#astronauten" style={{ color: "white" }}>Astronauts</Link>
+        <Link href="#astronauten" style={{ color: "white", textDecoration: "none" }}>Astronauts</Link>
       </li>
       <li style={{ margin: "0 20px" }}>
-        <Link href="#launches" style={{ color: "white" }}>Launches</Link>
+        <Link href="#launches" style={{ color: "white", textDecoration: "none" }}>Launches</Link>
       </li>
       <li style={{ margin: "0 20px" }}>
-        <Link href="#events" style={{ color: "white" }}>Events</Link>
+        <Link href="#events" style={{ color: "white", textDecoration: "none" }}>Events</Link>
       </li>
     </ul>
   );
