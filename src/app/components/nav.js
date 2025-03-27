@@ -13,7 +13,7 @@ function Nav() {
       top: 0,                   // Zorg ervoor dat de navbar bovenaan blijft
       backgroundColor: "#2E3D5A", // Zet de achtergrond op zwart
       zIndex: 1000,             // Zorg ervoor dat de navbar boven andere elementen blijft
-      fontSize: "18px",         // Vergroot de tekst
+      fontSize: "16px",         // Vergroot de tekst
     }}>
       <li style={{ margin: "0 20px" }}>
         <Link href="#" style={{ color: "white", textDecoration: "none" }}>Home</Link> {/* Link naar boven */}
