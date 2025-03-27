@@ -44,7 +44,7 @@ export const SpaceEvents = () => {
                 alt={event.name}
               />
               <span style={{ fontSize: "18px", fontWeight: 'bold' }}>{event.name}</span> <br/>
-              <span style={{ fontSize: "12px" }}>{event.description || "Onbekend"}</span> <br />
+              <span style={{ fontSize: "14px" }}>{event.description || "Onbekend"}</span> <br />
 {event.location || "Onbekend"}<br/>
 <a
   style={{
