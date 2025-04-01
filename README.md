@@ -84,3 +84,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/flex
 
 Nav en Footer op alle pagina
 [https://www.reddit.com/r/nextjs/comments/15xjefm/learned_how_to_create_a_global_header_and_footer/](https://www.reddit.com/r/nextjs/comments/15xjefm/comment/jx99d9k/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+
+Button
+https://stackoverflow.com/questions/67999186/how-to-go-back-to-previous-page-in-next-js-using-next-router
