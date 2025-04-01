@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import Nav from "./components/nav";  // Default import
+import Nav from "./components/nav";
 import { Astronauts } from "./components/astronautenAPI";
 import { Launches } from "./components/launchesAPI";
 import { SpaceEvents } from "./components/events";
