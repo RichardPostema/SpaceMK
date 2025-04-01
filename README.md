@@ -78,3 +78,6 @@ https://stackoverflow.com/questions/31775182/react-event-onmouseleave-not-trigge
 
 Navbar sticky
 https://stackoverflow.com/questions/58096450/how-to-have-a-sticky-navbar-in-reactjs
+
+Flex
+https://developer.mozilla.org/en-US/docs/Web/CSS/flex
