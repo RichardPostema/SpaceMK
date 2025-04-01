@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "SpaceMK 🚀",
+  title: "SpaceMK NextJS 🚀",
   description: "Milkyway Knowledge",
 };
 
