@@ -55,8 +55,8 @@ https://www.youtube.com/watch?v=v0_AT8zaLo8
 Learn Next.js 15 in 1 hour - Beginner Tutorial
 https://www.youtube.com/watch?v=_EgI9WH8q1A
 
-Raket Emoji
-https://emojipedia.org/nl/raket
+Emoji
+https://emojipedia.org/nl/
 
 ¹ - The Complete Frontend Developer Roadmap
 https://www.youtube.com/watch?v=Tef1e9FiSR0
@@ -75,3 +75,6 @@ https://stackoverflow.com/questions/53219249/css-grid-template-columns-repeat-no
 
 onMouseEnter/onMouseLeave
 https://stackoverflow.com/questions/31775182/react-event-onmouseleave-not-triggered-when-moving-cursor-fast
+
+Navbar sticky
+https://stackoverflow.com/questions/58096450/how-to-have-a-sticky-navbar-in-reactjs
