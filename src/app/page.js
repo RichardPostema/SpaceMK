@@ -13,7 +13,6 @@ export default function Home() {
         <Header />
         <Nav />
         
-        {/* Dit zijn de secties die je wilt navigeren */}
         <div id="astronauten">
           <Astronauts />
         </div>
