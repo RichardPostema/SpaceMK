@@ -42,57 +42,60 @@ export default function Astronaut({ params }) {
   };
 
   return (
-    <div id="astronauten" style={{ textAlign: "center", padding: "20px" }}>
-      <h2>People in space 👽</h2>
+    <div id="astronauten" style={{padding: "20px", display: "flex" }}>
+      {/* Afbeelding links */}
+      <div style={{ paddingRight:"20px" }}>
+        <img
+          style={{ width: "80%", height: "600px", objectFit: "cover", borderRadius: "10px", border: "1px solid #ddd", padding: "1px" }}
+          src={astronaut.image ? astronaut.image.image_url : "/spacewalkingastronaut.jpg"}
+          onError={(e) => (e.target.src = "/spacewalkingastronaut.jpg")}
+          alt={astronaut.name}
+        />
+      </div>
 
-      <img
-        style={{ width: "100%", height: "", objectFit: "fill", borderRadius: "10px" }}
-        src={astronaut.image ? astronaut.image.image_url : "/spacewalkingastronaut.jpg"}
-        onError={(e) => (e.target.src = "/spacewalkingastronaut.jpg")}
-        alt={astronaut.name}
-      />
+      {/* Tekst rechts */}
+      <div style={{ flex: 2 }}>
+        <h2>{astronaut.name}</h2>
 
-      <h3>{astronaut.name}</h3>
+        {astronaut.agency && <p>Agency: {astronaut.agency.name}</p>}
+        {astronaut.date_of_birth && <p>Age: {astronaut.age}</p>}
+        {astronaut.bio && <p>{astronaut.bio}</p>}
 
-      {astronaut.agency && <p>Agency: {astronaut.agency.name}</p>}
-      {astronaut.bio && <p>{astronaut.bio}</p>}
+        {astronaut.wiki && (
+          <p>
+            <a href={astronaut.wiki} target="_blank" rel="noopener noreferrer">
+              Wikipedia
+            </a>
+          </p>
+        )}
 
-      {astronaut.wiki && (
-        <p>
-          <a href={astronaut.wiki} target="_blank" rel="noopener noreferrer">
-            Wikipedia
-          </a>
-        </p>
-      )}
+        {/* Laatste vlucht */}
+        {astronaut.last_flight && (
+          <div>
+            <h4>Last Flight:</h4>
+            <p>{formatDate(astronaut.last_flight.net)}</p>
+          </div>
+        )}
 
-      {/* Laatste vlucht */}
-      {astronaut.last_flight && (
-        <div>
-          <h4>Last Flight:</h4>
-          <p>{astronaut.last_flight.name}</p>
-          <p>{formatDate(astronaut.last_flight.net)}</p>
-        </div>
-      )}
+        {/* Eerste vlucht */}
+        {astronaut.first_flight && (
+          <div>
+            <h4>First Flight:</h4>
+            <p>{formatDate(astronaut.first_flight.net)}</p>
+          </div>
+        )}
 
-      {/* Eerste vlucht */}
-      {astronaut.first_flight && (
-        <div>
-          <h4>First Flight:</h4>
-          <p>{astronaut.first_flight.name}</p>
-          <p>{formatDate(astronaut.first_flight.net)}</p>
-        </div>
-      )}
-
-      {astronaut.flights && astronaut.flights.length > 0 && (
-        <div>
-          <h4>All Missions:</h4>
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            {astronaut.flights.map((mission, index) => (
-              <li key={index}>{mission.name}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+        {astronaut.flights && astronaut.flights.length > 0 && (
+          <div>
+            <h4>All Missions:</h4>
+            <ul style={{ listStyle: "none", padding: 0 }}>
+              {astronaut.flights.map((mission, index) => (
+                <li key={index}>{mission.name}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

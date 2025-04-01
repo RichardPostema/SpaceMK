@@ -16,7 +16,7 @@ function Nav() {
       fontSize: "16px",         // Vergroot de tekst
     }}>
       <li style={{ margin: "0 20px" }}>
-        <Link href="#" style={{ color: "white", textDecoration: "none" }}>Home</Link> {/* Link naar boven */}
+        <Link href="/" style={{ color: "white", textDecoration: "none" }}>Home</Link> {/* Link naar boven */}
       </li>
       <li style={{ margin: "0 20px" }}>
         <Link href="#astronauten" style={{ color: "white", textDecoration: "none" }}>Astronauts</Link>
