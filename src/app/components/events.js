@@ -25,7 +25,7 @@ export const SpaceEvents = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div id="events" style={{ textAlign: "center" }}> {/* De hoofd container wordt gecentreerd */}      <h2>Events 🌌</h2>
+    <div id="events" style={{ textAlign: "center" }}> {/* De hoofd container wordt gecentreerd */}      <h2 style={{ backgroundColor: "#4B0082", color: "white", padding: "10px", borderRadius: "5px" }}>Events 🌌</h2>
       {events.length === 0 ? (
         <p>There are currently no events available.</p>
       ) : (

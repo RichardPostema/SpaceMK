@@ -42,7 +42,9 @@ export const Launches = () => {
 
   return (
     <div id="launches" style={{ textAlign: "center" }}> {/* De hoofd container wordt gecentreerd */}
-      <h2>Launches 🛰️</h2>
+      <h2 style={{ backgroundColor: "#E63946", color: "white", padding:"10px",borderRadius: "10px" }}>
+      Launches 🛰️
+    </h2>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", textAlign: "center" }}> {/* Grid ook gecentreerd */}
         {launches.slice(0, 6).map((launch) => (
           <div key={launch.id} style={{ textAlign: "center", border: "1px solid #ddd", padding: "10px", borderRadius: "10px" }}> {/* Alles in de div wordt gecentreerd */}
