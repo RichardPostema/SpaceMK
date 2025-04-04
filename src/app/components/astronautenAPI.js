@@ -31,13 +31,8 @@ export const Astronauts = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-<<<<<<< Updated upstream
-    <div id="astronauten" style={{ textAlign: "center" }}>
-      <h2>People in space 👽</h2>
-=======
     <div id="astronaut" style={{ textAlign: "center" }}>
       <h2 style={{ backgroundColor: "#024C8B", color: "white", padding: "10px", borderRadius: "5px" }}>People in space 👽</h2>
->>>>>>> Stashed changes
       {astronauts.length === 0 ? (
         <p>No astronauts in space at the moment.</p>
       ) : (
