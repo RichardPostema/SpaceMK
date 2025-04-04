@@ -1,5 +1,9 @@
+import Nav from "./components/nav";
+import Header from "./components/header";
+import Footer from "./components/footer";
+
 export const metadata = {
-  title: "SpaceMK 🚀",
+  title: "SpaceMK NextJS 🚀",
   description: "Milkyway Knowledge",
 };
 
@@ -11,7 +15,10 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
       </head>
       <body style={{ backgroundColor: "#141A26", color: "white", margin: 0, fontFamily: "'Roboto', sans-serif" }}>
+      <Header />
+      <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
