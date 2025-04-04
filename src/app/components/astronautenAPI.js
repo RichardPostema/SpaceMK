@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from 'next/link';
 
 const getDaysInSpace = (time) => {
   const regex = /^P(\d+)D/;
@@ -48,7 +49,8 @@ export const Astronauts = () => {
               <span style={{ fontSize: "18px", fontWeight: "bold" }}>{astronaut.name}</span> <br />
               <span style={{ fontSize: "14px" }}>{astronaut.agency?.name || "Unknown Agency"}</span> <br />
               <span style={{ fontSize: "12px" }}>Days in space: {getDaysInSpace(astronaut.time_in_space)}</span><br />
-              <a
+              <Link
+              href={`astronauten/${astronaut.name}`}
                 style={{
                   width: "120px",
                   height: "40px", 
@@ -72,7 +74,7 @@ export const Astronauts = () => {
                 }}
               >
                 Info
-              </a>
+              </Link>
             </div>
           ))}
         </div>
