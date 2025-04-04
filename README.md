@@ -33,7 +33,12 @@ Ze zoeken vaak naar tools die hen helpen meer te leren en ontdekken over mijn on
 
 ## Code Review door:
 [Kirsten](https://github.com/RichardPostema/SpaceMK/pull/1#issuecomment-2777905570) 
-[Marsha]()
+[Marsha](https://github.com/RichardPostema/SpaceMK/pull/1#issuecomment-2777962637)
+
+## Code Review gedaan bij:
+[Kirsten](https://github.com/kirstenv006/swipethejoke/pull/1#issuecomment-2777931936)
+[Marsha](https://github.com/MarshaZeldenrust/FED/pull/4#issuecomment-2777867091)
+
 ## Bronnen:
 ```
 Tom Offringa
