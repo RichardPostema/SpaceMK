@@ -32,7 +32,8 @@ __Waarom?__<br>
 Ze zoeken vaak naar tools die hen helpen meer te leren en ontdekken over mijn onderwerp.
 
 ## Code Review door:
-
+[Kirsten](https://github.com/RichardPostema/SpaceMK/pull/1#issuecomment-2777905570) 
+[Marsha]()
 ## Bronnen:
 ```
 Tom Offringa
