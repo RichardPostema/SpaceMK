@@ -41,7 +41,7 @@ export const Astronauts = () => {
           {astronauts.slice(0, 10).map((astronaut) => (
             <div key={astronaut.id} style={{ textAlign: "center", border: "1px solid #ddd", padding: "10px", borderRadius: "10px" }}>
               <img
-                style={{ width: "100%", height: "400px", objectFit: "cover", borderRadius: "10px" }}
+                style={{ width: "100%", height: "400px", objectFit: "cover", borderRadius: "10px", boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.6)"}}
                 src={astronaut.image ? astronaut.image.image_url : "/spacewalkingastronaut.jpg"}
                 onError={(e) => (e.target.src = "/spacewalkingastronaut.jpg")}
                 alt={astronaut.name}

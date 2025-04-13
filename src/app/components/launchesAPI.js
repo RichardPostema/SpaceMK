@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { useEffect, useState } from "react";
 
 // Functie om de countdown te berekenen
@@ -41,19 +42,20 @@ export const Launches = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div id="launches" style={{ textAlign: "center" }}> {/* De hoofd container wordt gecentreerd */}
+    <div id="launches" style={{ textAlign: "center" }}>
       <h2 style={{ backgroundColor: "#E63946", color: "white", padding:"10px",borderRadius: "10px" }}>
-      Launches 🛰️
-    </h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", textAlign: "center" }}> {/* Grid ook gecentreerd */}
+        Launches 🛰️
+      </h2>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", textAlign: "center" }}>
         {launches.slice(0, 6).map((launch) => (
-          <div key={launch.id} style={{ textAlign: "center", border: "1px solid #ddd", padding: "10px", borderRadius: "10px" }}> {/* Alles in de div wordt gecentreerd */}
+          <div key={launch.id} style={{ textAlign: "center", border: "1px solid #ddd", padding: "10px", borderRadius: "10px" }}>
             <img
               style={{
                 width: "100%",
                 height: "200px",
                 objectFit: "cover",
                 borderRadius: "10px",
+                boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.6)"
               }}
               src={launch.image ? launch.image.image_url : "/spacelaunch.png"}
               onError={(e) => (e.target.src = "/spacelaunch.png")}
@@ -67,31 +69,32 @@ export const Launches = () => {
                 <strong>Countdown:</strong> {getCountdown(launch.net)}
               </>
             )}
-<a
-  style={{
-    width: "120px",
-    height: "40px", // Vergroot de hoogte voor betere centrering
-    marginTop: "10px",
-    cursor: "pointer",
-    border: "1px solid #ddd",
-    borderRadius: "10px",
-    textAlign: "center",
-    display: "inline-block",
-    lineHeight: "40px",
-    fontWeight: "bold",
-    transition: "background-color 0.3s, color 0.3s", // Voeg overgangseffecten toe
-  }}
-  onMouseEnter={(e) => {
-    e.target.style.backgroundColor = "#ddd"; // Verander de achtergrondkleur bij hover
-    e.target.style.color = "black"; // Verander de tekstkleur bij hover
-  }}
-  onMouseLeave={(e) => {
-    e.target.style.backgroundColor = "transparent"; // Herstel de achtergrondkleur
-    e.target.style.color = "white"; // Herstel de tekstkleur
-  }}
->
-  Info
-</a>
+            <Link
+              href={`launches/${launch.name}`}
+              style={{
+                width: "120px",
+                height: "40px", 
+                marginTop: "10px",
+                cursor: "pointer",
+                border: "1px solid #ddd",
+                borderRadius: "10px",
+                textAlign: "center",
+                display: "inline-block",
+                lineHeight: "40px",
+                fontWeight: "bold",
+                transition: "background-color 0.3s, color 0.3s",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = "#ddd";
+                e.target.style.color = "black";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = "transparent";
+                e.target.style.color = "white";
+              }}
+            >
+              Info
+            </Link>
           </div>
         ))}
       </div>
