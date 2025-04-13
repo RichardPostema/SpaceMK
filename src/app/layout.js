@@ -1,4 +1,3 @@
-import Nav from "./components/nav";
 import Header from "./components/header";
 import About from "./components/about"
 import Footer from "./components/footer";
@@ -20,7 +19,7 @@ export default function RootLayout({ children }) {
       <Header />
       <About />
     </div>
-      <Nav />
+  
         {children}
         <Footer />
       </body>

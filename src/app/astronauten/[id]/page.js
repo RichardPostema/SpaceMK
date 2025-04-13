@@ -55,6 +55,13 @@ export default function Astronaut({ params }) {
 
   return (
     <div>
+      {/* Event Header */}
+      <div id="events" style={{ textAlign: "center", marginTop: "20px" }}>
+        <h2 style={{ backgroundColor: "#024C8B", color: "white", padding: "10px", borderRadius: "5px" }}>
+          Person in space 👽
+        </h2>
+      </div>
+
       {/* Back button */}
       <button
         onClick={() => router.push("/")}
@@ -98,19 +105,31 @@ export default function Astronaut({ params }) {
           <h2>{astronaut.name}</h2>
           {astronaut.agency && <p>Agency: {astronaut.agency.name}</p>}
           {astronaut.date_of_birth && <p>Age: {astronaut.age}</p>}
-          {astronaut.bio && <p>{astronaut.bio}</p>}
+          {astronaut.bio && (
+  <p
+    style={{
+      overflowWrap: "break-word",
+      wordWrap: "break-word",
+      maxWidth: "70%",
+      marginTop: "10px",
+    }}
+  >
+    {astronaut.bio}
+  </p>
+)}
 
-          {astronaut.wiki && (
+          {astronaut.wiki &&  (
             <p>
               <a style={{ color: "white" }} href={astronaut.wiki} target="_blank" rel="noopener noreferrer">
                 Wikipedia
               </a>
             </p>
           )}
-
+<div style={{ marginTop: "20px", borderTop: "1px solid #ccc", paddingTop: "15px" }}>
           {astronaut.flights_count && (
             <p><strong>Flights Count:</strong> {astronaut.flights_count}</p>
           )}
+          </div>
 
           {astronaut.last_flight && (
             <div>
@@ -126,15 +145,6 @@ export default function Astronaut({ params }) {
             </div>
           )}
 
-          {astronaut?.flights && astronaut.flights.length > 0 ? (
-            <div>
-              <h2>Laatste missie</h2>
-              <p><strong>Naam:</strong> {flight.name}</p>
-              <p><strong>ID:</strong> {flight.id}</p>
-            </div>
-          ) : (
-            <p>Geen missies gevonden.</p>
-          )}
         </div>
       </div>
     </div>

@@ -2,7 +2,6 @@
 
 import { useState, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link"; // Voeg de juiste import van Link toe
 
 const formatDate = (dateString) => {
   if (!dateString) return "Unknown";
@@ -81,12 +80,11 @@ export default function Event({ params }) {
       {/* Event Info */}
       <div style={{ padding: "20px", display: "flex", gap: "20px" }}>
         {/* Event Image */}
-        <div style={{ flex: "1", minWidth: "300px", display: "flex", justifyContent: "center" }}>
+        <div style={{ flex: "1", minWidth: "300px", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <img
             style={{
               width: "60%",
               height: "400px",
-              aspectRatio: "3/2",
               objectFit: "cover",
               borderRadius: "10px",
               border: "1px solid #ddd",
@@ -100,44 +98,51 @@ export default function Event({ params }) {
         </div>
 
         {/* Event Details */}
-        <div style={{ flex: "1", textAlign: "left" }}>
+        <div style={{ flex: "1", textAlign: "left", gap:"-20px" }}>
           <h2>{event.name}</h2>
+          {event.type?.name && <p><strong>Type:</strong> {event.type.name}</p>}
           {event.date && <p><strong>Date:</strong> {formatDate(event.date)}</p>}
           {event.location && <p><strong>Location:</strong> {event.location}</p>}
-          {event.description && <p>{event.description}</p>}
-        </div>
-      </div>
+          {event.webcast_live !== null && (
+            <p><strong>Live webcast:</strong> {event.webcast_live ? "Yes" : "No"}</p>
+          )}
+          {event.last_updated && (
+            <p><strong>Last updated:</strong> {formatDate(event.last_updated)}</p>
+          )}
+          {event.description && (<p
+    style={{
+      marginTop: "15px",
+      overflowWrap: "break-word",
+      wordWrap: "break-word",
+      maxWidth: "90%",
+    }}
+  >
+    {event.description}
+  </p>
+)}
 
-      {/* Add link to event listing */}
-      <div style={{ textAlign: "center", marginTop: "20px" }}>
-        <Link
-          href="/events" // Link naar de overzichtspagina van events
-          style={{
-            width: "120px",
-            height: "40px",
-            marginTop: "10px",
-            cursor: "pointer",
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            textAlign: "center",
-            display: "inline-block",
-            lineHeight: "40px",
-            fontWeight: "bold",
-            backgroundColor: "#333",
-            color: "white",
-            transition: "background-color 0.3s, color 0.3s", 
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.backgroundColor = "#ddd"; // Verander de achtergrondkleur bij hover
-            e.target.style.color = "black"; // Verander de tekstkleur bij hover
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.backgroundColor = "#333"; // Herstel de achtergrondkleur
-            e.target.style.color = "white"; // Herstel de tekstkleur
-          }}
-        >
-          Back to Events
-        </Link>
+          {/* Links */}
+          <div style={{ marginTop: "20px", borderTop: "1px solid #ccc", paddingTop: "15px" }}>
+  {event.vid_urls?.length > 0 && (
+    <a
+      href={event.vid_urls[0]?.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-block",
+        backgroundColor: "#024C8B",
+        color: "#fff",
+        padding: "10px 20px",
+        borderRadius: "5px",
+        textDecoration: "none",
+        marginRight: "10px"
+      }}
+    >
+      ▶️ Watch Video
+    </a>
+  )}
+</div>
+        </div>
       </div>
     </div>
   );

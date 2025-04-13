@@ -10,7 +10,7 @@ export const SpaceEvents = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("https://lldev.thespacedevs.com/2.3.0/events/?format=json");
+        const res = await fetch("https://lldev.thespacedevs.com/2.3.0/events/?format=json&limit=10&offset=963");
         const data = await res.json();
         setEvents(data.results);
       } catch (error) {
