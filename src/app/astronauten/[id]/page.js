@@ -54,6 +54,7 @@ export default function Astronaut({ params }) {
   const flight = astronaut?.flights?.length > 0 ? astronaut.flights[0] : null;
 
   return (
+
     <div>
       {/* Event Header */}
       <div id="events" style={{ textAlign: "center", marginTop: "20px" }}>
@@ -144,7 +145,6 @@ export default function Astronaut({ params }) {
               <p>{formatDate(astronaut.first_flight)}</p>
             </div>
           )}
-
         </div>
       </div>
     </div>
