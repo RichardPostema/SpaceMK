@@ -83,11 +83,11 @@ export default function Astronaut({ params }) {
       {/* Astronaut Information */}
       <div style={{ padding: "20px", display: "flex" }}>
         {/* Astronaut Image */}
-        <div style={{ flex: "1", minWidth: "300px", display: "flex", justifyContent: "center" }}>
+        <div style={{ flex: "1", display: "flex", justifyContent: "center" }}>
           <img
             style={{
               width: "60%",
-              height: "400px",
+              height: "800px",
               aspectRatio: "3/2",
               objectFit: "cover",
               borderRadius: "10px",

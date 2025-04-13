@@ -98,7 +98,7 @@ export default function Launch({ params }) {
           <img
             style={{
               width: "60%",
-              height: "400px",
+              height: "800px",
               aspectRatio: "3/2",
               objectFit: "cover",
               borderRadius: "10px",

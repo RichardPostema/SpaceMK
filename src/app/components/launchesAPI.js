@@ -82,7 +82,8 @@ export const Launches = () => {
                 display: "inline-block",
                 lineHeight: "40px",
                 fontWeight: "bold",
-                transition: "background-color 0.3s, color 0.3s",
+                transition: "background-color 0.3s, color 0.3s", 
+                color: "white", // Zorg ervoor dat de kleur van de link wit blijft
               }}
               onMouseEnter={(e) => {
                 e.target.style.backgroundColor = "#ddd";

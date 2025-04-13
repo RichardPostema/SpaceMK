@@ -53,7 +53,7 @@ export const SpaceEvents = () => {
                 href={`events/${event.name}`} // Verander naar event.name
                 style={{
                   width: "120px",
-                  height: "40px", // Vergroot de hoogte voor betere centrering
+                  height: "40px", 
                   marginTop: "10px",
                   cursor: "pointer",
                   border: "1px solid #ddd",
@@ -62,7 +62,8 @@ export const SpaceEvents = () => {
                   display: "inline-block",
                   lineHeight: "40px",
                   fontWeight: "bold",
-                  transition: "background-color 0.3s, color 0.3s", // Voeg overgangseffecten toe
+                  transition: "background-color 0.3s, color 0.3s", 
+                  color: "white", // Zorg ervoor dat de kleur van de link wit blijft
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.backgroundColor = "#ddd"; // Verander de achtergrondkleur bij hover

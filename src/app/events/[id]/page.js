@@ -84,7 +84,7 @@ export default function Event({ params }) {
           <img
             style={{
               width: "60%",
-              height: "400px",
+              height: "800px",
               objectFit: "cover",
               borderRadius: "10px",
               border: "1px solid #ddd",

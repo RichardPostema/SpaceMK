@@ -50,31 +50,33 @@ export const Astronauts = () => {
               <span style={{ fontSize: "14px" }}>{astronaut.agency?.name || "Unknown Agency"}</span> <br />
               <span style={{ fontSize: "12px" }}>Days in space: {getDaysInSpace(astronaut.time_in_space)}</span><br />
               <Link
-              href={`astronauten/${astronaut.name}`}
-                style={{
-                  width: "120px",
-                  height: "40px", 
-                  marginTop: "10px",
-                  cursor: "pointer",
-                  border: "1px solid #ddd",
-                  borderRadius: "10px",
-                  textAlign: "center",
-                  display: "inline-block",
-                  lineHeight: "40px",
-                  fontWeight: "bold",
-                  transition: "background-color 0.3s, color 0.3s", 
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = "#ddd"; 
-                  e.target.style.color = "black"; 
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = "transparent"; 
-                  e.target.style.color = "white"; 
-                }}
-              >
-                Info
-              </Link>
+  href={`astronauten/${astronaut.name}`}
+  style={{
+    width: "120px",
+    height: "40px", 
+    marginTop: "10px",
+    cursor: "pointer",
+    border: "1px solid #ddd",
+    borderRadius: "10px",
+    textAlign: "center",
+    display: "inline-block",
+    lineHeight: "40px",
+    fontWeight: "bold",
+    transition: "background-color 0.3s, color 0.3s", 
+    color: "white", // Zorg ervoor dat de kleur van de link wit blijft
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "#ddd"; 
+    e.target.style.color = "black"; 
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "transparent"; 
+    e.target.style.color = "white"; 
+  }}
+>
+  Info
+</Link>
+
             </div>
           ))}
         </div>
