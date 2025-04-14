@@ -16,28 +16,30 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+https://react.dev/learn/creating-a-react-app
+https://nextjs.org/docs
+
 ## Reden voor het gebruik van React/Next.JS:
 Het advies dat ik online tegenkwam[¹](https://nextjs.org](https://www.youtube.com/watch?v=Tef1e9FiSR0)) was om eerst met React te beginnen, zodat andere frameworks later makkelijker te begrijpen zijn. Ik ontdekte dat React werkt met herbruikbare componenten en dat het door Meta (Facebook) is gemaakt. Daardoor zijn er veel gebruikers en kun je online makkelijk hulp vinden, via Google en YouTube. Denk aan tutorials, forums en voorbeelden. Bij frameworks zoals Vue of Angular verwachtte ik dat er minder support beschikbaar zou zijn als ik ergens vast zou lopen. Omdat ik totaal niet bekend was met frameworks en mezelf niet in de vingers wilde snijden, heb ik daarom gekozen voor React.
 
 Bij het installatieproces van ‘Creating a React App’ zag ik dat React je doorstuurt naar andere frameworks zoals Next.js, React Router (v7) en Expo (voor native apps). Ook zijn er twee nieuwe spelers: TanStack Start (Beta) en RedwoodJS. In overleg met Tom Offringa bleek de beste keuze om te werken met Next.js.
 
-## Welke API heb ik gebruikt:
-[thespacedevs](https://thespacedevs.com/llapi)
+## Welke API heb ik gebruikt:<br>
+[thespacedevs](https://thespacedevs.com/llapi)<br>
 
 __Waarom?__<br>
 De API biedt informatie over recente en aankomende lanceringen, evenementen, astronauten en expedities. Zo kun je in de app snel zien wat er op de planning staat, wie erbij betrokken zijn en waar het plaatsvindt. Ideaal voor wie graag op de hoogte blijft van alles wat met ruimtevaart te maken heeft.
 
-## Doelgroep
+## Doelgroep<br>
 Ruimte- en technologie-liefhebbers<br>
 __Waarom?__<br>
 Persoonlijk vind ik het fascinerend hoe het eraan toe gaat in de ruimte en wat daar allemaal bij komt kijken. Denk aan de mensen in het International Space Station, hun achtergrond en de missies waar ze aan werken. Die nieuwsgierigheid deel ik met veel ruimte- en technologieliefhebbers. Ze willen niet alleen weten wat er gebeurt, maar ook waarom, en hoe. Mijn app sluit daar op aan. Het is een plek waar je makkelijk informatie vindt over actuele missies, astronauten, launches en events vind. Voor hobbyisten en liefhebbers is het een handige tool om alles op één plek te volgen en steeds weer iets nieuws te ontdekken.
 
-<br>
-## Code Review door:
+## Code Review door:<br>
 [Kirsten](https://github.com/RichardPostema/SpaceMK/pull/1#issuecomment-2777905570) 
 [Marsha](https://github.com/RichardPostema/SpaceMK/pull/1#issuecomment-2777962637)
 
-## Code Review gedaan bij:
+## Code Review gedaan bij:<br>
 [Kirsten](https://github.com/kirstenv006/swipethejoke/pull/1#issuecomment-2777931936)
 [Marsha](https://github.com/MarshaZeldenrust/FED/pull/4#issuecomment-2777867091)
 
