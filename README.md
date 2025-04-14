@@ -16,8 +16,8 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-https://react.dev/learn/creating-a-react-app
-https://nextjs.org/docs
+https://react.dev/learn/creating-a-react-app<br>
+https://nextjs.org/docs<br>
 
 ## Reden voor het gebruik van React/Next.JS:
 Het advies dat ik online tegenkwam[¹](https://nextjs.org](https://www.youtube.com/watch?v=Tef1e9FiSR0)) was om eerst met React te beginnen, zodat andere frameworks later makkelijker te begrijpen zijn. Ik ontdekte dat React werkt met herbruikbare componenten en dat het door Meta (Facebook) is gemaakt. Daardoor zijn er veel gebruikers en kun je online makkelijk hulp vinden, via Google en YouTube. Denk aan tutorials, forums en voorbeelden. Bij frameworks zoals Vue of Angular verwachtte ik dat er minder support beschikbaar zou zijn als ik ergens vast zou lopen. Omdat ik totaal niet bekend was met frameworks en mezelf niet in de vingers wilde snijden, heb ik daarom gekozen voor React.
